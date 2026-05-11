@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Shimgilina · Alex & Mihret · May 26, 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,300;0,9..144,400;1,9..144,200;1,9..144,300;1,9..144,400&family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400&family=Noto+Serif+Ethiopic:wght@300;400&display=swap"
+    rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    :root {
+      --bg: #060504;
+      --s1: #0c0a08;
+      --s2: #111009;
+      --g1: #c4923e;
+      --g2: #ddb05a;
+      --g3: #eece80;
+      --g4: #f8edcc;
+      --gb: rgba(196, 146, 62, .12);
+      --gbr: rgba(196, 146, 62, .1);
+      --ivory: #f5eedd;
+      --dim: rgba(245, 238, 221, .45);
+      --faint: rgba(245, 238, 221, .2);
+      --serif: 'Fraunces', serif;
+      --sans: 'DM Sans', sans-serif;
+      --eth: 'Noto Serif Ethiopic', serif;
+      --ease: cubic-bezier(.22, 1, .36, 1);
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ivory);
+      font-family: var(--sans);
+      font-weight: 300;
+      overflow-x: hidden
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+      opacity: .032;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23g)'/%3E%3C/svg%3E")
+    }
+
+    #cr {
+      position: fixed;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--g3);
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      transition: width .25s var(--ease), height .25s var(--ease), background .2s;
+      mix-blend-mode: difference
+    }
+
+    #cr.big {
+      width: 44px;
+      height: 44px;
+      background: rgba(196, 146, 62, .18)
+    }
+
+    #seal {
+      position: fixed;
+      inset: 0;
+      z-index: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      cursor: none;
+      background: var(--bg)
+    }
+
+    .seal-photo {
+      position: absolute;
+      inset: 0;
+      background: url('assets/d.png') center/cover no-repeat;
+      filter: brightness(.18) saturate(.4);
+      transform: scale(1.06);
+      animation: sealpan 24s ease-in-out infinite alternate
+    }
+
+    .seal-photo-m {
+      display: none;
+      position: absolute;
+      inset: 0;
+      background: url('assets/d-mobile.png') center/cover no-repeat;
+      filter: brightness(.18) saturate(.4)
+    }
+
+    @media(max-width:560px) {
+      .seal-photo {
+        display: none
+      }
+
+      .seal-photo-m {
+        display: block
+      }
+    }
+
+    @keyframes sealpan {
+      from {
+        transform: scale(1.06) translateX(0)
+      }
+
+      to {
+        transform: scale(1.06) translateX(-2%)
+      }
+    }
+
+    .seal-vig {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 65% at 50% 42%, rgba(6, 5, 4, .3) 0%, rgba(4, 3, 2, .97) 100%);
+      pointer-events: none
+    }
+
+    .seal-inner {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 22px;
+      text-align: center;
+      padding: 32px 24px;
+      max-width: 380px
+    }
+
+    .seal-ring-wrap {
+      position: relative;
+      width: 148px;
+      height: 148px;
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    .seal-ring-wrap::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 1px solid rgba(196, 146, 62, .18);
+      animation: rpulse 3.5s ease-in-out infinite
+    }
+
+    .seal-ring-wrap::after {
+      content: "";
+      position: absolute;
+      inset: -20px;
+      border-radius: 50%;
+      border: 1px solid rgba(196, 146, 62, .07);
+      animation: rpulse 3.5s ease-in-out .5s infinite
+    }
+
+    @keyframes rpulse {
+
+      0%,
+      100% {
+        opacity: .4;
+        transform: scale(1)
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1.02)
+      }
+    }
+
+    .seal-ring {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 1px solid rgba(196, 146, 62, .35);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      animation: rpulse 3.5s ease-in-out 1s infinite
+    }
+
+    .seal-am {
+      font-family: var(--serif);
+      font-size: 2.4rem;
+      font-style: italic;
+      color: var(--g3);
+      line-height: 1;
+      letter-spacing: .03em
+    }
+
+    .seal-eth {
+      font-family: var(--eth);
+      font-size: .72rem;
+      color: rgba(196, 146, 62, .38);
+      margin-top: 2px
+    }
+
+    .seal-title {
+      font-family: var(--serif);
+      font-size: clamp(1.7rem, 5.5vw, 2.2rem);
+      font-weight: 300;
+      color: var(--ivory);
+      letter-spacing: .01em;
+      line-height: 1.1
+    }
+
+    .seal-sub {
+      font-size: .58rem;
+      letter-spacing: .38em;
+      text-transform: uppercase;
+      color: rgba(196, 146, 62, .55)
+    }
+
+    .seal-line {
+      width: 1px;
+      height: 24px;
+      background: linear-gradient(to bottom, transparent, rgba(196, 146, 62, .35), transparent)
+    }
+
+    .seal-tap {
+      font-size: .52rem;
+      letter-spacing: .38em;
+      text-transform: uppercase;
+      color: rgba(245, 238, 221, .18);
+      animation: tblink 2.6s ease-in-out infinite
+    }
+
+    @keyframes tblink {
+
+      0%,
+      100% {
+        opacity: .2
+      }
+
+      50% {
+        opacity: .8
+      }
+    }
+
+    #seal.out {
+      animation: sealout .9s var(--ease) forwards
+    }
+
+    @keyframes sealout {
+      to {
+        opacity: 0;
+        transform: scale(1.05);
+        pointer-events: none
+      }
+    }
+
+    #main {
+      opacity: 0;
+      transition: opacity 1s ease .25s
+    }
+
+    #main.on {
+      opacity: 1
+    }
+
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      overflow: hidden;
+      background: var(--bg)
+    }
+
+    .hgrid {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      grid-template-columns: .68fr .68fr 1.3fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 3px
+    }
+
+    .hcell {
+      overflow: hidden;
+      position: relative
+    }
+
+    .hcell:nth-child(1) {
+      grid-column: 3;
+      grid-row: 1/3
+    }
+
+    .hcell:nth-child(2) {
+      grid-column: 1/3;
+      grid-row: 1
+    }
+
+    .hcell:nth-child(3) {
+      grid-column: 1;
+      grid-row: 2
+    }
+
+    .hcell:nth-child(4) {
+      grid-column: 2;
+      grid-row: 2
+    }
+
+    .hcell img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(.62) saturate(.72);
+      transform: scale(1.07);
+      transition: transform 16s ease;
+      display: block
+    }
+
+    .hcell::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 30%, rgba(6, 5, 4, .6) 100%), linear-gradient(135deg, rgba(196, 146, 62, .18), transparent 55%)
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 14px;
+      z-index: 4;
+      pointer-events: none;
+      border: 1px solid rgba(196, 146, 62, .13);
+      border-radius: 4px
+    }
+
+    .hero-ov {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      background: linear-gradient(to bottom, transparent 30%, rgba(6, 5, 4, .98) 100%), linear-gradient(to right, rgba(6, 5, 4, .68) 0%, transparent 50%)
+    }
+
+    .hero-body {
+      position: absolute;
+      inset: 0;
+      z-index: 5;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 8px clamp(28px, 7vw, 96px) clamp(52px, 8vw, 108px);
+    }
+
+    .fu {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .95s var(--ease), transform .95s var(--ease)
+    }
+
+    #main.on .fu:nth-child(1) {
+      opacity: 1;
+      transform: none;
+      transition-delay: .65s
+    }
+
+    #main.on .fu:nth-child(2) {
+      opacity: 1;
+      transform: none;
+      transition-delay: .85s
+    }
+
+    #main.on .fu:nth-child(3) {
+      opacity: 1;
+      transform: none;
+      transition-delay: 1.05s
+    }
+
+    #main.on .fu:nth-child(4) {
+      opacity: 1;
+      transform: none;
+      transition-delay: 1.28s
+    }
+
+    #main.on .fu:nth-child(5) {
+      opacity: 1;
+      transform: none;
+      transition-delay: 1.52s
+    }
+
+    .hbadge {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 16px;
+      border: 1px solid rgba(196, 146, 62, .22);
+      background: rgba(6, 5, 4, .5);
+      backdrop-filter: blur(14px);
+      width: fit-content;
+      margin-bottom: 16px
+    }
+
+    .bdot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--g2);
+      animation: bdot 2.2s ease-in-out infinite
+    }
+
+    @keyframes bdot {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1)
+      }
+
+      50% {
+        opacity: .3;
+        transform: scale(.5)
+      }
+    }
+
+    .badge-t {
+      font-size: .58rem;
+      letter-spacing: .35em;
+      text-transform: uppercase;
+      color: var(--g3);
+      font-weight: 400
+    }
+
+    .htitle {
+      font-family: var(--serif);
+      font-size: clamp(3rem, 9vw, 9.5rem);
+      font-weight: 200;
+      line-height: .88;
+      color: var(--ivory);
+      letter-spacing: -.025em
+    }
+
+    .htitle em {
+      font-style: italic;
+      color: var(--g3);
+      display: block
+    }
+
+    .hbar {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-bottom: 20px;
+      width: min(480px, 88vw)
+    }
+
+    .hbar-thick {
+      height: 4px;
+      background: repeating-linear-gradient(90deg, var(--g1) 0, var(--g1) 6px, transparent 6px, transparent 10px, rgba(196, 146, 62, .3) 10px, rgba(196, 146, 62, .3) 14px, transparent 14px, transparent 18px);
+      opacity: .65
+    }
+
+    .hbar-zig {
+      height: 9px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='9'%3E%3Cpolyline points='0,7 5,2 10,7 15,2 20,7' fill='none' stroke='%23c4923e' stroke-width='1' opacity='.4'/%3E%3C/svg%3E");
+      background-repeat: repeat-x;
+      background-size: 20px 9px;
+      animation: zigslide 16s linear infinite
+    }
+
+    .hbar-thin {
+      height: 2px;
+      background: repeating-linear-gradient(90deg, rgba(196, 146, 62, .4) 0, rgba(196, 146, 62, .4) 4px, transparent 4px, transparent 8px);
+      opacity: .45
+    }
+
+    @keyframes zigslide {
+      to {
+        background-position-x: 200px
+      }
+    }
+
+    .hpills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 22px
+    }
+
+    .hpill {
+      padding: 8px 17px;
+      border: 1px solid rgba(196, 146, 62, .2);
+      font-size: .6rem;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--g3);
+      background: rgba(6, 5, 4, .45);
+      backdrop-filter: blur(10px)
+    }
+
+    .hscroll {
+      position: absolute;
+      right: clamp(26px, 4vw, 54px);
+      bottom: clamp(36px, 5vw, 64px);
+      z-index: 6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 9px;
+      opacity: 0;
+      transition: opacity 1s ease 2.4s
+    }
+
+    #main.on .hscroll {
+      opacity: 1
+    }
+
+    .hscroll span {
+      font-size: .48rem;
+      letter-spacing: .4em;
+      text-transform: uppercase;
+      color: var(--faint);
+      writing-mode: vertical-rl
+    }
+
+    .hscroll-bar {
+      width: 1px;
+      height: 52px;
+      background: linear-gradient(to bottom, var(--g2), transparent);
+      animation: sbar 2.4s ease-in-out infinite
+    }
+
+    @keyframes sbar {
+      0% {
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 1
+      }
+
+      60% {
+        transform: scaleY(1);
+        transform-origin: top;
+        opacity: 1
+      }
+
+      100% {
+        transform: scaleY(1);
+        transform-origin: bottom;
+        opacity: 0
+      }
+    }
+
+    @media(max-width:680px) {
+      .hgrid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr
+      }
+
+      .hcell:nth-child(1) {
+        grid-column: 2;
+        grid-row: 1/3
+      }
+
+      .hcell:nth-child(2) {
+        grid-column: 1;
+        grid-row: 1
+      }
+
+      .hcell:nth-child(3) {
+        grid-column: 1;
+        grid-row: 2
+      }
+
+      .hcell:nth-child(4) {
+        grid-column: 1/3;
+        grid-row: 3
+      }
+
+      .hero-body {
+        padding: 28px 22px 44px
+      }
+
+      .htitle {
+        font-size: clamp(2.8rem, 14vw, 5rem)
+      }
+    }
+
+    .mq {
+      overflow: hidden;
+      border-top: 1px solid rgba(196, 146, 62, .09);
+      border-bottom: 1px solid rgba(196, 146, 62, .09);
+      background: var(--s1);
+      padding: 16px 0
+    }
+
+    .mq-track {
+      display: flex;
+      gap: 56px;
+      white-space: nowrap;
+      animation: mqroll 26s linear infinite
+    }
+
+    .mq-item {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.1rem;
+      color: rgba(196, 146, 62, .3);
+      flex-shrink: 0
+    }
+
+    .mq-dot {
+      color: rgba(196, 146, 62, .2);
+      margin: 0 4px
+    }
+
+    @keyframes mqroll {
+      to {
+        transform: translateX(-50%)
+      }
+    }
+
+    .sec {
+      padding: clamp(72px, 10vw, 130px) clamp(24px, 7vw, 100px);
+      max-width: 1200px;
+      margin: 0 auto
+    }
+
+    .sep {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(196, 146, 62, .1), transparent)
+    }
+
+    .lbl {
+      font-size: .56rem;
+      letter-spacing: .42em;
+      text-transform: uppercase;
+      color: var(--g1);
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px
+    }
+
+    .lbl::before {
+      content: "";
+      width: 24px;
+      height: 1px;
+      background: var(--g1);
+      flex-shrink: 0
+    }
+
+    .ttl {
+      font-family: var(--serif);
+      font-size: clamp(2.4rem, 6vw, 5rem);
+      font-weight: 200;
+      color: var(--ivory);
+      line-height: .94;
+      margin-bottom: 36px;
+      letter-spacing: -.02em
+    }
+
+    .ttl em {
+      font-style: italic;
+      color: var(--g3)
+    }
+
+    .orn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 36px 0
+    }
+
+    .orn-l {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(196, 146, 62, .22), transparent)
+    }
+
+    .orn-gem {
+      width: 7px;
+      height: 7px;
+      background: var(--g1);
+      transform: rotate(45deg);
+      flex-shrink: 0
+    }
+
+    .orn-dot {
+      width: 4px;
+      height: 4px;
+      background: rgba(196, 146, 62, .35);
+      transform: rotate(45deg);
+      flex-shrink: 0
+    }
+
+    .r {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity .85s var(--ease), transform .85s var(--ease)
+    }
+
+    .r.v {
+      opacity: 1;
+      transform: none
+    }
+
+    .r.d1 {
+      transition-delay: .1s
+    }
+
+    .r.d2 {
+      transition-delay: .2s
+    }
+
+    .r.d3 {
+      transition-delay: .32s
+    }
+
+    .r.d4 {
+      transition-delay: .45s
+    }
+
+    .verse-sec {
+      background: linear-gradient(165deg, var(--s1) 0%, var(--bg) 100%);
+      border-top: 1px solid rgba(196, 146, 62, .08);
+      position: relative;
+      overflow: hidden
+    }
+
+    .verse-sec::after {
+      content: "";
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 450px;
+      height: 450px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(196, 146, 62, .04) 0%, transparent 62%);
+      pointer-events: none
+    }
+
+    .vcard {
+      border-left: 1px solid var(--g1);
+      padding: 28px 28px 28px 32px;
+      max-width: 700px;
+      position: relative
+    }
+
+    .vcard::before {
+      content: "❝";
+      position: absolute;
+      top: -16px;
+      left: 26px;
+      font-family: var(--serif);
+      font-size: 3.5rem;
+      color: rgba(196, 146, 62, .12);
+      line-height: 1
+    }
+
+    .v-amh {
+      font-family: var(--eth);
+      font-size: clamp(1rem, 2vw, 1.22rem);
+      line-height: 1.95;
+      color: var(--g3);
+      margin-bottom: 12px
+    }
+
+    .v-en {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(.85rem, 1.5vw, 1rem);
+      line-height: 2;
+      color: var(--dim);
+      margin-bottom: 12px
+    }
+
+    .v-ref {
+      font-size: .56rem;
+      letter-spacing: .32em;
+      text-transform: uppercase;
+      color: var(--g1)
+    }
+
+    .ip {
+      font-size: clamp(.88rem, 1.7vw, 1.04rem);
+      line-height: 2;
+      color: rgba(245, 238, 221, .55);
+      margin-bottom: 14px;
+      max-width: 660px
+    }
+
+    .ip strong {
+      color: var(--g3);
+      font-weight: 400
+    }
+
+    .pillars-sec {
+      background: var(--bg);
+      border-top: 1px solid rgba(196, 146, 62, .07)
+    }
+
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      background: rgba(196, 146, 62, .08);
+      gap: 1px
+    }
+
+    .pillar {
+      background: var(--s1);
+      padding: 34px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 13px;
+      transition: background .3s
+    }
+
+    .pillar:hover {
+      background: var(--s2)
+    }
+
+    .pnum {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      color: rgba(196, 146, 62, .1);
+      line-height: 1;
+      font-style: italic
+    }
+
+    .picon {
+      font-size: 1.5rem
+    }
+
+    .pname {
+      font-size: .87rem;
+      color: var(--ivory);
+      font-weight: 300;
+      line-height: 1.35
+    }
+
+    .pamh {
+      font-family: var(--eth);
+      font-size: .68rem;
+      color: rgba(196, 146, 62, .38)
+    }
+
+    @media(max-width:800px) {
+      .pillars {
+        grid-template-columns: 1fr 1fr
+      }
+    }
+
+    @media(max-width:440px) {
+      .pillars {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .cd-sec {
+      position: relative;
+      overflow: hidden;
+      background: var(--s1);
+      border-top: 1px solid rgba(196, 146, 62, .08)
+    }
+
+    .cd-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 700px;
+      height: 400px;
+      background: radial-gradient(ellipse, rgba(196, 146, 62, .04) 0%, transparent 62%);
+      pointer-events: none
+    }
+
+    .cdgrid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      max-width: 500px;
+      margin: 0 auto
+    }
+
+    .cdbox {
+      background: var(--s2);
+      border: 1px solid rgba(196, 146, 62, .13);
+      padding: 28px 10px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: border-color .3s
+    }
+
+    .cdbox::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 15%;
+      right: 15%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(196, 146, 62, .5), transparent)
+    }
+
+    .cdbox:hover {
+      border-color: rgba(196, 146, 62, .28)
+    }
+
+    .cdn {
+      display: block;
+      font-family: var(--serif);
+      font-size: clamp(2rem, 6vw, 3.6rem);
+      font-weight: 200;
+      color: var(--g2);
+      line-height: 1;
+      margin-bottom: 7px
+    }
+
+    .cdl {
+      display: block;
+      font-size: .52rem;
+      letter-spacing: .35em;
+      text-transform: uppercase;
+      color: var(--dim)
+    }
+
+    .cal-wrap {
+      max-width: 580px
+    }
+
+    .cal-box {
+      border: 1px solid rgba(196, 146, 62, .13);
+      overflow: hidden
+    }
+
+    .cal-head {
+      padding: 16px 20px;
+      background: rgba(196, 146, 62, .06);
+      border-bottom: 1px solid rgba(196, 146, 62, .1);
+      font-size: .6rem;
+      letter-spacing: .35em;
+      text-transform: uppercase;
+      color: var(--g2);
+      text-align: center
+    }
+
+    table.cal {
+      width: 100%;
+      border-collapse: collapse
+    }
+
+    table.cal th {
+      padding: 12px 4px 9px;
+      font-size: .54rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--dim);
+      font-weight: 300;
+      text-align: center
+    }
+
+    table.cal td {
+      height: 58px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, .03);
+      vertical-align: middle
+    }
+
+    .de {
+      display: block;
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      color: var(--g3);
+      line-height: 1.2;
+      font-style: italic
+    }
+
+    .dg {
+      display: block;
+      font-size: .56rem;
+      color: var(--dim);
+      margin-top: 1px
+    }
+
+    .wd {
+      background: var(--g1) !important
+    }
+
+    .wd .de,
+    .wd .dg {
+      color: #0d0b08 !important;
+      font-weight: 700
+    }
+
+    @media(max-width:500px) {
+      table.cal td {
+        height: 45px
+      }
+
+      .de {
+        font-size: .88rem
+      }
+    }
+
+    .sched-sec {
+      background: var(--s2);
+      border-top: 1px solid rgba(196, 146, 62, .07)
+    }
+
+    .evgrid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: rgba(196, 146, 62, .08)
+    }
+
+    .ev {
+      background: var(--bg);
+      padding: 30px 22px;
+      position: relative;
+      overflow: hidden;
+      transition: background .3s
+    }
+
+    .ev::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(196, 146, 62, .3), transparent)
+    }
+
+    .ev:hover {
+      background: var(--s1)
+    }
+
+    .evn {
+      font-family: var(--serif);
+      font-size: 3.8rem;
+      font-style: italic;
+      color: rgba(196, 146, 62, .07);
+      line-height: .9;
+      margin-bottom: 16px;
+      display: block
+    }
+
+    .evtime {
+      font-size: .6rem;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--g1);
+      margin-bottom: 8px
+    }
+
+    .evtitle {
+      font-size: .93rem;
+      color: var(--ivory);
+      margin-bottom: 5px;
+      font-weight: 300
+    }
+
+    .evloc {
+      font-family: var(--eth);
+      font-size: .78rem;
+      color: var(--dim)
+    }
+
+    @media(max-width:680px) {
+      .evgrid {
+        grid-template-columns: 1fr 1fr
+      }
+    }
+
+    @media(max-width:440px) {
+      .evgrid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .map-sec {
+      background: var(--bg);
+      border-top: 1px solid rgba(196, 146, 62, .07)
+    }
+
+    .mapbox {
+      border: 1px solid rgba(196, 146, 62, .1);
+      overflow: hidden
+    }
+
+    .mapbox iframe {
+      display: block;
+      width: 100%;
+      height: clamp(260px, 42vw, 440px);
+      border: none;
+      filter: invert(.88) hue-rotate(180deg) brightness(.78) saturate(.55)
+    }
+
+    .close-sec {
+      text-align: center;
+      padding: clamp(80px, 12vw, 150px) clamp(24px, 8vw, 100px);
+      position: relative;
+      overflow: hidden;
+      border-top: 1px solid rgba(196, 146, 62, .09)
+    }
+
+    .close-glow {
+      position: absolute;
+      bottom: -15%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 420px;
+      background: radial-gradient(ellipse, rgba(196, 146, 62, .05) 0%, transparent 62%);
+      pointer-events: none
+    }
+
+    .closeq {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 4.2vw, 2.7rem);
+      font-weight: 200;
+      font-style: italic;
+      color: var(--g3);
+      line-height: 1.55;
+      max-width: 660px;
+      margin: 0 auto 14px
+    }
+
+    .closesub {
+      font-family: var(--eth);
+      font-size: clamp(.82rem, 1.6vw, .94rem);
+      color: var(--dim);
+      max-width: 460px;
+      margin: 0 auto 40px;
+      line-height: 2
+    }
+
+    .tgbtn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 32px;
+      border: 1px solid rgba(196, 146, 62, .3);
+      color: var(--g3);
+      text-decoration: none;
+      font-size: .6rem;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      background: rgba(196, 146, 62, .05);
+      backdrop-filter: blur(12px);
+      transition: all .3s var(--ease);
+      font-weight: 400
+    }
+
+    .tgbtn:hover {
+      background: var(--g1);
+      color: var(--bg);
+      border-color: var(--g1);
+      transform: translateY(-2px)
+    }
+  </style>
+</head>
+
+<body>
+  <div id="cr"></div>
+  <div id="seal">
+    <div class="seal-photo"></div>
+    <div class="seal-photo-m"></div>
+    <div class="seal-vig"></div>
+    <div class="seal-inner">
+      <div class="seal-ring-wrap">
+        <div class="seal-ring">
+          <span class="seal-am">A&M</span>
+          <span class="seal-eth">አሌክስ &amp; ሚህረት</span>
+        </div>
+      </div>
+      <div class="seal-title">Shimgilina</div>
+      <div class="seal-sub">ሽምግልና · The Elders' Blessing</div>
+      <div class="seal-line"></div>
+      <div class="seal-tap">Touch anywhere to enter</div>
+    </div>
+  </div>
+  <div id="main">
+    <section class="hero">
+      <div class="hgrid">
+        <div class="hcell"><img src="assets/a.png" alt="Alex &amp; Mihret" /></div>
+        <div class="hcell"><img src="assets/e.png" alt="Alex &amp; Mihret celebration" /></div>
+        <div class="hcell"><img src="assets/f.png" alt="Alex &amp; Mihret" /></div>
+        <div class="hcell"><img src="assets/h.png" alt="Alex &amp; Mihret" /></div>
+      </div>
+      <div class="hero-ov"></div>
+      <div class="hero-body">
+        <div class="hbar fu">
+          <div class="hbar-thick"></div>
+          <div class="hbar-zig"></div>
+          <div class="hbar-thin"></div>
+        </div>
+        <div class="hbadge fu">
+          <div class="bdot"></div><span class="badge-t">Monday · May 26, 2026</span>
+        </div>
+        <h1 class="htitle fu">ሽምግልና<em>Shimgilina</em></h1>
+        <div class="hpills fu">
+          <span class="hpill">East West · Besrate Gebriel</span>
+        </div>
+        <div class="hscroll">
+          <div class="hscroll-bar"></div><span>scroll</span>
+        </div>
+      </div>
+    </section>
+    <div class="mq">
+      <div class="mq-track">
+        <span class="mq-item">Shimgilina</span><span class="mq-dot">◆</span>
+        <span class="mq-item">ሽምግልና</span><span class="mq-dot">◆</span>
+        <span class="mq-item">A &amp; M</span><span class="mq-dot">◆</span>
+        <span class="mq-item">May 26, 2026</span><span class="mq-dot">◆</span>
+        <span class="mq-item">The Elders Speak</span><span class="mq-dot">◆</span>
+        <span class="mq-item">East West · Gofa Mebrat</span><span class="mq-dot">◆</span>
+        <span class="mq-item">Shimgilina</span><span class="mq-dot">◆</span>
+        <span class="mq-item">ሽምግልና</span><span class="mq-dot">◆</span>
+        <span class="mq-item">A &amp; M</span><span class="mq-dot">◆</span>
+        <span class="mq-item">May 26, 2026</span><span class="mq-dot">◆</span>
+        <span class="mq-item">The Elders Speak</span><span class="mq-dot">◆</span>
+        <span class="mq-item">East West · Gofa Mebrat</span><span class="mq-dot">◆</span>
+      </div>
+    </div>
+    <section class="verse-sec">
+      <div class="sec">
+        <p class="lbl r">Scripture</p>
+        <h2 class="ttl r d1">A Blessing<br><em>Over This Union</em></h2>
+        <div class="vcard r d2">
+          <p class="v-amh">«ሙሽራይቱ ያለችው እርሱ ሙሽራ ነው፤ ቆሞ የሚሰማው ሚዜው ግን በሙሽራው ድምጽ እጅግ ደስ ይለዋል።»</p>
+          <p class="v-en">"He that hath the bride is the bridegroom: but the friend of the bridegroom, which standeth
+            and heareth him, rejoiceth greatly because of the bridegroom's voice."</p>
+          <p class="v-ref">John 3:29</p>
+        </div>
+        <div class="orn r d3">
+          <div class="orn-l"></div>
+          <div class="orn-dot"></div>
+          <div class="orn-gem"></div>
+          <div class="orn-dot"></div>
+          <div class="orn-l"></div>
+        </div>
+        <p class="ip r d2">ውድ ቤተሰቦቻችን እና ጓደኞቻችን — እነሆ በእግዚአብሔር ፈቃድ የሽምግልና ሥነ-ሥርዓታችንን ለመፈጸም ተዘጋጅተናል።</p>
+        <p class="ip r d3">Our elders will carry our families' honour to seek the blessing that opens the door to our
+          future together. We invite you to witness this sacred moment.</p>
+        <p class="ip r d3">የማይደገም እና የማይረሳ ቀናችንን ከእኛ ጋር ቢያሳልፉ ደስታችን እጥፍ ድርብ ነው።</p>
+        <p class="ip r d4"><strong>አቶ አሌክስ</strong> &amp; <strong>ወ/ሮ ሚህረት</strong></p>
+      </div>
+    </section>
+    <div class="sep"></div>
+    <section class="pillars-sec">
+      <div class="sec" style="padding-bottom:28px">
+        <p class="lbl r">The Tradition</p>
+        <h2 class="ttl r d1" style="margin-bottom:28px">The Spirit of<br><em>Shimgilina</em></h2>
+      </div>
+      <div class="pillars r d2">
+        <div class="pillar"><span class="pnum">01</span><span class="picon">🕊️</span>
+          <div class="pname">Formal Proposal</div>
+          <div class="pamh">የፍቅር ልመና</div>
+        </div>
+        <div class="pillar"><span class="pnum">02</span><span class="picon">🧓</span>
+          <div class="pname">The Shimagelay</div>
+          <div class="pamh">ሽምጋሌ</div>
+        </div>
+        <div class="pillar"><span class="pnum">03</span><span class="picon">🙏</span>
+          <div class="pname">Humility &amp; Reverence</div>
+          <div class="pamh">ክብርና ትህትና</div>
+        </div>
+        <div class="pillar"><span class="pnum">04</span><span class="picon">🤝</span>
+          <div class="pname">Two Families, One</div>
+          <div class="pamh">የቤተሰብ ጥምረት</div>
+        </div>
+        <div class="pillar"><span class="pnum">05</span><span class="picon">🎁</span>
+          <div class="pname">Sacred Gifts</div>
+          <div class="pamh">የስጦታ ምልክት</div>
+        </div>
+      </div>
+    </section>
+    <div class="sep"></div>
+    <section class="cd-sec">
+      <div class="cd-glow"></div>
+      <div class="sec" style="text-align:center">
+        <p class="lbl r" style="justify-content:center">Counting Down</p>
+        <h2 class="ttl r d1" style="text-align:center">Until the<br><em>Elders Speak</em></h2>
+        <div class="cdgrid r d2">
+          <div class="cdbox"><span class="cdn" id="days">00</span><span class="cdl">Days</span></div>
+          <div class="cdbox"><span class="cdn" id="hours">00</span><span class="cdl">Hours</span></div>
+          <div class="cdbox"><span class="cdn" id="mins">00</span><span class="cdl">Mins</span></div>
+          <div class="cdbox"><span class="cdn" id="secs">00</span><span class="cdl">Secs</span></div>
+        </div>
+      </div>
+    </section>
+    <div class="sep"></div>
+    <section>
+      <div class="sec">
+        <p class="lbl r">The Date</p>
+        <h2 class="ttl r d1">Shimgilina<br><em>Day</em></h2>
+        <div class="cal-wrap r d2">
+          <div class="cal-box">
+            <div class="cal-head">ግንቦት 2018 &nbsp;·&nbsp; May 2026</div>
+            <table class="cal">
+              <thead>
+                <tr>
+                  <th>Sun</th>
+                  <th>Mon</th>
+                  <th>Tue</th>
+                  <th>Wed</th>
+                  <th>Thu</th>
+                  <th>Fri</th>
+                  <th>Sat</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><span class="de">1</span><span class="dg">9</span></td>
+                  <td><span class="de">2</span><span class="dg">10</span></td>
+                  <td><span class="de">3</span><span class="dg">11</span></td>
+                </tr>
+                <tr>
+                  <td><span class="de">4</span><span class="dg">12</span></td>
+                  <td><span class="de">5</span><span class="dg">13</span></td>
+                  <td><span class="de">6</span><span class="dg">14</span></td>
+                  <td><span class="de">7</span><span class="dg">15</span></td>
+                  <td><span class="de">8</span><span class="dg">16</span></td>
+                  <td><span class="de">9</span><span class="dg">17</span></td>
+                  <td><span class="de">10</span><span class="dg">18</span></td>
+                </tr>
+                <tr>
+                  <td><span class="de">11</span><span class="dg">19</span></td>
+                  <td><span class="de">12</span><span class="dg">20</span></td>
+                  <td><span class="de">13</span><span class="dg">21</span></td>
+                  <td><span class="de">14</span><span class="dg">22</span></td>
+                  <td><span class="de">15</span><span class="dg">23</span></td>
+                  <td><span class="de">16</span><span class="dg">24</span></td>
+                  <td><span class="de">17</span><span class="dg">25</span></td>
+                </tr>
+                <tr>
+                  <td class="wd"><span class="de">18</span><span class="dg">26</span></td>
+                  <td><span class="de">19</span><span class="dg">27</span></td>
+                  <td><span class="de">20</span><span class="dg">28</span></td>
+                  <td><span class="de">21</span><span class="dg">29</span></td>
+                  <td><span class="de">22</span><span class="dg">30</span></td>
+                  <td><span class="de">23</span><span class="dg">1</span></td>
+                  <td><span class="de">24</span><span class="dg">2</span></td>
+                </tr>
+                <tr>
+                  <td><span class="de">25</span><span class="dg">3</span></td>
+                  <td><span class="de">26</span><span class="dg">4</span></td>
+                  <td><span class="de">27</span><span class="dg">5</span></td>
+                  <td><span class="de">28</span><span class="dg">6</span></td>
+                  <td><span class="de">29</span><span class="dg">7</span></td>
+                  <td><span class="de">30</span><span class="dg">8</span></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="sep"></div>
+    <section class="sched-sec">
+      <div class="sec" style="padding-bottom:28px">
+        <p class="lbl r">Program</p>
+        <h2 class="ttl r d1">Day of<br><em>Shimgilina</em></h2>
+      </div>
+      <div class="evgrid r d2">
+        <div class="ev"><span class="evn">01</span>
+          <div class="evtime">03:00 · LT</div>
+          <div class="evtitle">Groom's House</div>
+          <div class="evloc">አያት ዞን 1</div>
+        </div>
+        <div class="ev"><span class="evn">02</span>
+          <div class="evtime">04:00 · LT</div>
+          <div class="evtitle">Bride's House</div>
+          <div class="evloc">አያት ዞን 3</div>
+        </div>
+        <div class="ev"><span class="evn">03</span>
+          <div class="evtime">05:00 · LT</div>
+          <div class="evtitle">Departing to Venue</div>
+          <div class="evloc">ጉዞ ወደ አዳራሽ</div>
+        </div>
+        <div class="ev"><span class="evn">04</span>
+          <div class="evtime">06:30 · LT</div>
+          <div class="evtitle">Lunch Celebration</div>
+          <div class="evloc">East West · Gofa Mebrat</div>
+        </div>
+      </div>
+    </section>
+    <div class="sep"></div>
+    <section class="map-sec">
+      <div class="sec">
+        <p class="lbl r">Location</p>
+        <h2 class="ttl r d1">Venue &amp;<br><em>Directions</em></h2>
+        <div class="mapbox r d2">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.0325096643937!2d38.74715387384831!3d8.96915148992531!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b840f18c9e7fd%3A0x6fff5ee2cb351002!2sEast%20West%20%7C%20Gofa%20Mebrat!5e0!3m2!1sen!2set!4v1775851020116!5m2!1sen!2set"
+            allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+    <section class="close-sec">
+      <div class="close-glow"></div>
+      <div class="orn r" style="max-width:220px;margin:0 auto 44px">
+        <div class="orn-l"></div>
+        <div class="orn-dot"></div>
+        <div class="orn-gem"></div>
+        <div class="orn-dot"></div>
+        <div class="orn-l"></div>
+      </div>
+      <p class="closeq r">"When the elders speak,<br>two families become one."</p>
+      <p class="closesub r d1">"መገኘትዎ ለደስታችን ትልቅ ትርጉም አለው።"<br>Your presence means the world to us.</p>
+      <div class="r d2">
+        <a href="https://t.me/+HM3dTldn4X9kNTVk" target="_blank" class="tgbtn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.11.02-1.93 1.23-5.46 3.62-.51.35-.98.52-1.4.51-.46-.01-1.35-.26-2.01-.48-.81-.27-1.45-.42-1.39-.89.03-.24.36-.49.99-.75 3.88-1.69 6.47-2.8 7.76-3.32 3.69-1.5 4.46-1.76 4.96-1.77.11 0 .36.03.52.17.13.12.17.28.19.39.01.07.02.21.01.27z" />
+          </svg>
+          Share Photos · Telegram
+        </a>
+      </div>
+    </section>
+  </div>
+  <script>
+    const cr = document.getElementById('cr');
+    let mx = 0, my = 0, cx = 0, cy = 0;
+    document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY });
+    document.querySelectorAll('a,button,.pillar,.ev,.cdbox,.hcell,.tgbtn').forEach(el => {
+      el.addEventListener('mouseenter', () => cr.classList.add('big'));
+      el.addEventListener('mouseleave', () => cr.classList.remove('big'));
+    });
+    (function loop() { cx += (mx - cx) * .16; cy += (my - cy) * .16; cr.style.left = cx + 'px'; cr.style.top = cy + 'px'; requestAnimationFrame(loop) })();
+    const seal = document.getElementById('seal'), main = document.getElementById('main');
+    function open() { seal.classList.add('out'); setTimeout(() => { seal.style.display = 'none'; main.classList.add('on') }, 920) }
+    seal.addEventListener('click', open);
+    seal.addEventListener('touchend', e => { e.preventDefault(); open() });
+    const t = new Date("May 26, 2026 05:00:00").getTime();
+    function tick() {
+      const d = t - Date.now();
+      if (d < 0) { document.querySelector('.cdgrid').innerHTML = '<p style="grid-column:1/-1;font-family:Fraunces,serif;font-style:italic;font-size:1.5rem;color:#ddb05a;text-align:center;padding:24px">The Elders Have Spoken!</p>'; return }
+      const p = n => String(Math.floor(n)).padStart(2, '0');
+      document.getElementById('days').textContent = p(d / 86400000);
+      document.getElementById('hours').textContent = p((d % 86400000) / 3600000);
+      document.getElementById('mins').textContent = p((d % 3600000) / 60000);
+      document.getElementById('secs').textContent = p((d % 60000) / 1000);
+    }
+    setInterval(tick, 1000); tick();
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('v'); io.unobserve(e.target) } }), { threshold: .08 });
+    document.querySelectorAll('.r').forEach(el => io.observe(el));
+    window.addEventListener('load', () => document.querySelectorAll('.hcell img').forEach(i => i.style.transform = 'scale(1)'));
+  </script>
+</body>
+
+</html>
